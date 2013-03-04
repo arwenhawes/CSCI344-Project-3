@@ -1,0 +1,15 @@
+"work,travel,pets".split(","); //this will split the categories into an array by the comma
+
+"work,travel,pets".split(",").forEach(function (category) {
+console.log(category);
+});
+///will split into an array and then print each one out
+spit
+map
+trim  
+
+"work,travel,pets".split(",").map(function (element) {
+   return element.trim();
+});
+this will split the 3 things into an array, map them then trim the white space off the begining and end
+
