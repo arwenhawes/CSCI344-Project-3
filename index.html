@@ -6,11 +6,25 @@ and open the template in the editor.
 <html>
     <head>
         <title>Project 3 To do List</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!---<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>---> 
+        <link rel="stylesheet" href="reset.css" type="text/css" /> 
+        <link rel="stylesheet" href="style.css" type="text/css" />
     </head>
     <body>
-        <div>hello world</div>
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <div class="tabs">
+            <a class="tab active" href="tab1">All</a>
+            <a class="tab" href="tab2" id="tab2">Categorized</a>
+            <a class="tab" href="tab3" id="tab3">Edit</a>
+        </div>
+
+        <div class="content">
+            <div class="tab active" id="tasks">&nbsp;</div>
+            <div class="tab" id="categoryList">&nbsp;</div>
+            <div class="tab" id="addTasks">&nbsp;</div>
+              
+        </div>
+        <script src="jquery-1.9.1.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

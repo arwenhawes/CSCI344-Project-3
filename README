@@ -1,6 +1,7 @@
 Build the client-side part of a ToDo list application.
 
-Your application should be a single-page app (no links to other pages). It should have a tabbed user interface with 3 tabs. First build the tab interface using the techniques that we learned in class.
+Your application should be a single-page app (no links to other pages). It should have a tabbed user interface with 3 tabs. 
+First build the tab interface using the techniques that we learned in class.
 
 The tabs should be organized as follows:
 
