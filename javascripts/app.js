@@ -23,15 +23,33 @@
             return categoryArray;
         };
         
-        var buildCategoryTab = function(){
-          $("#tab2").click(function(){
-            $("categoryList").empty("#categoryList");
-            $("#categoryList").append("<button id='remove'>Remove</button>");
-            console.log("categoryList: hi there");
-          }); 
-        }; 
+        //add tasks to category
+        var listCategories = function(categoryArray) {
+            $("#catTab").click(function() {
+              alert("working!"+ categoryArray.length);
+              for (var z = 0; z> categoryArray.length; z++) {
+                   $("#categoryList").append("<ul>" + "<li>" + categoryArray(z) + " </li>");  
+              };
+            });
+        };
+        
+        var addTasksToCategories = function(){
+            $("#categoryList").empty();
+            categoryArray.forEach(function(){
+                $("#categoryList").append("<p>" + category + "</p>");
+                todos.forEach(function(todo){
+                    todo.categories.forEach(function(category){
+                        if (categoryArray.indexOf(category)!==-1){
+                            $("#categoryList").append("<ul>" + "<li>" + description + " </li>");
+                        };
+                    });
+                });
+            });
+        };
+         
         var buildAddTab = function(){
           $("#tab3").click(function(){
+              alert("hi there@!");
               $("addTasks").append("<input type='text' class='new_task' id='nTask' placeholder='task'><br>");
               $("addTasks").append("<input type='text' class='new_task' id='nCategory' placeholder='categories'><br>");
               $("addTasks").append("<button class='submit'>Submit</button>");
@@ -41,9 +59,6 @@
         };
         
         $.getJSON("all.json", function(todos) {
-            for (var i = 0; i < todos.length; i++) {
-                console.log(todos[i]);
-            };
             todos.forEach(function(todo) {
                 $("#tasks").append("<p>" + todo.description + "<button id='remove'>Remove</button>" + " </p>");
                 todo.categories.forEach(function(category) {
@@ -52,13 +67,15 @@
                 });       
             });
             //tests to make sure array is correct
-            for (i = 0; i < categoryArray.length; i++) {
+            for (var i = 0; i < categoryArray.length; i++) {
                         console.log(categoryArray[i]);
                     };
         });
         activeTab($(".tabs .tab"));//calls activeTab function
-        buildCategoryTab();
+        //buildCategoryTab(category);
         buildAddTab();
+        addTasksToCategories();
+        listCategories(categoryArray);
     };
 
     $(document).ready(main);
