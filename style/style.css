@@ -1,9 +1,9 @@
 body { 
     font-family: 'Patrick Hand SC', arial;
-    padding:50px 80px;
+    padding:50px 50px;
 }
 p {
-    font-size: large;
+    font-size: 20px;
 }
 
 ul{
@@ -16,11 +16,13 @@ ul{
 .tabs {
   margin-top: 50px;
   margin-bottom:20px;
+  font-size: 30px;
+  
 }
 
 .tabs .tab {
   background: #ccc;
-  padding: 5px;
+  padding: 0.6em;
 }
 
 .tabs .active {
@@ -28,25 +30,11 @@ ul{
   border: 1px solid black;
   border-bottom-width: 0;
 }
-table, td, th, tr  {
-    border: 1px solid black;
-    border-collapse: collapse;
-    border-spacing: 5em;
-    width: 60%;
-}
-tr{
-}
-td, th {
-    border: 1px solid black;
-    padding: .2em .7em;
-}
-.tab1_task{
-    
-}
 .content .tab {
   display: none; 
 }
 
 .content .active {
   display: block;
+  font-size: 20px;
 }
