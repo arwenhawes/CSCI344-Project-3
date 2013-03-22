@@ -6,25 +6,31 @@ and open the template in the editor.
 <html>
     <head>
         <title>Project 3 To do List</title>
-        <!---<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>---> 
-        <link rel="stylesheet" href="reset.css" type="text/css" /> 
-        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'> 
+        <link rel="stylesheet" href="style/reset.css" type="text/css" /> 
+        <link rel="stylesheet" href="style/style.css" type="text/css" />
     </head>
     <body>
         <div class="tabs">
-            <a class="tab active" href="tab1">All</a>
-            <a class="tab" href="tab2" id="catTab">Categorized</a>
-            <a class="tab" href="tab3" id="tab3">Edit</a>
+            <a class="tab active" href="tasks">All</a>
+            <a class="tab catTab" href="categoryList">Categorized</a>
+            <a class="tab" href="addTasks">Edit</a>
         </div>
 
         <div class="content">
             <div class="tab active" id="tasks">&nbsp;</div>
             <div class="tab" id="categoryList">&nbsp;</div>
-            <div class="tab" id="addTasks">&nbsp;</div>
+            <div class="tab" id="addTasks">&nbsp;
+                
+                <p>Task: <input type="text"></p>
+                <p>Categories: <input type="text"></p>
+                <input type="submit" value="Submit">
+            </div>
               
         </div>
         <script src="jquery-1.9.1.js"></script>
-        <script src="app.js"></script>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="javascripts/app.js"></script>
     </body>
 </html>
